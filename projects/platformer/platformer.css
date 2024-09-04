@@ -3,10 +3,13 @@ body {
 }
 
 canvas {
-  background-color: lightblue;
-  margin: 20px;
+  background-color: rgb(129, 238, 184);
+  margin: 20 px;
+  background-image:url(images/mansion.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 img {
-  display: none;
+ display: none;
 }

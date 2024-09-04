@@ -97,4 +97,7 @@ var collectableList = {
   kennedi: { image: "images/collectables/kennedi-head.png" },
   max: { image: "images/collectables/max-head.png" },
   steve: { image: "images/collectables/steve-head.png" },
+  mask: { image:"images/collectables/mask.png"},
+  money: {image: "images/collectables/money.jpg"},
+  diamond: {image:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADqCAMAAAD3THt5AAAAWlBMVEX///8p1P8AAAAbjKh3wsDE/f8q2f8ahqAA0f8r3v+D1tTM//8g1f98wbt8y8kMh6Z909EckrAAzf/U//8Zf5kt5/8KgZ6BysSAv7UQ2/8s4v+D082N1s0Ag6R8PKQdAAACbklEQVR4nO3c3XLaMBCA0dC0/BNaIDgJ6fu/ZnOtZaodj+y65nzXjPBhdLNI8PTUqG+NavU8zQIDm0hgYBMJDGwigYFNJDCwiQQ2bVirB3rfFL3+Y2qrt18vijZgwwRWCWyswCqBjRVYJbCxAqsENlZglWYLO62L3keFZd4sPGKm03lXdB51ps4sHTZVpvXuR9Fu1M0JBgYGBgYGBgYGBgb2ILDMoDkgLLNQnJczrshIrDMubLCNFwMDAwMDAwMDAwMDAwP7KyxzMBth0x801/E15bi8C64vWf2rgUV5KN37VLoVLDISDbk5wcDAwMDAwMDAwMDAZgALk+8pviYOmonO631ZT1grRq9b3Hd6OxS9BVk7WGbj9fp6J7Y/fC86gIGBgYGBgYGBgYGBgT0ArNf5fytY7lT6f4RFKRgYGBgYGBgYGBgY2KPAEr9fbgZb1vtoBdvffhbdEp9rP1h3XVV7bgfbFg0IOz5X+wUGBgYGBgYGBgYGBvYosM9b0Wdizk0VLjsf4qB5LGsGW4Q75MtLfc7NdFnGpUOHruilGSy0XNU3TKbVss92BQMDAwMDAwMDAwMDexhYmP02rQbNTVg6wrqXom1GcYe6Ca7AuPNAvYof0CXI2v1yPcLCxstsoUyZlcHAwMDAwMDAwMDAwMDGgZVntzOBHcNpezcTWJf56gYMDAwMDAwMDAwMDGyWsNfyD64+ruU96msrWFj5d3ngnDxx7kd9Ke9RZ35fnmmfuqHdqjuwcnu0g7XaeGBgYGBgYGBgYGBgYLOEbcuptgt/I92znje0h6MO14AMMDAwMDAwMDAwMDAwMLBsfwDpG2JetoLlVgAAAABJRU5ErkJggg=="},
 };
