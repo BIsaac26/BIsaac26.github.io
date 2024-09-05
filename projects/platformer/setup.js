@@ -2,9 +2,9 @@
 const walkAcceleration = 2.5; // how much is added to the speed each frame
 const gravity = 0.5; // how much is subtracted from speedY each frame
 const friction = 1.5; // how much the player is slowed each frame
-const maxSpeed = 8; // maximum horizontal speed, not vertical
+const maxSpeed = 10; // maximum horizontal speed, not vertical
 const playerJumpStrength = 12; // this is subtracted from the speedY each jump
-const projectileSpeed = 8; // the speed of projectiles
+const projectileSpeed = 15; // the speed of projectiles
 
 /////////////////////////////////////////////////
 //////////ONLY CHANGE ABOVE THIS POINT///////////
@@ -12,7 +12,7 @@ const projectileSpeed = 8; // the speed of projectiles
 
 // Base game variables
 const frameRate = 60;
-const playerScale = 0.8; //makes the player just a bit smaller. Doesn't affect the hitbox, just the image
+const playerScale = 0.6; //makes the player just a bit smaller. Doesn't affect the hitbox, just the image
 
 // Player variables
 const player = {
@@ -76,8 +76,8 @@ const cannonHeight = 80;
 let projectiles = [];
 const defaultProjectileWidth = 24;
 const defaultProjectileHeight = defaultProjectileWidth;
-const collectableWidth = 40;
-const collectableHeight = 40;
+const collectableWidth = 55;
+const collectableHeight = 55;
 let collectables = [];
 
 // canvas and context variables; must be initialized later
