@@ -26,7 +26,7 @@ var circles = [];
         // TODO 2 : Create a function that draws a circle 
         function drawCircle(){
             circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
-            physikz.addRandomVelocity(circle, canvas, 80, 80);
+            physikz.addRandomVelocity(circle, canvas, 20, 20);
 view.addChild(circle);
 circles.push(circle);
         }
@@ -90,6 +90,7 @@ for(var i = 0; i < 100; i++){
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
+           
             if(circle.x < 0){
                 circle.x = canvas.width;
             }
@@ -99,8 +100,24 @@ for(var i = 0; i < 100; i++){
               if(circle.y < 0){
                 circle.y = canvas.height;
               }
-
-
+              var rightEdge = circle.x + circle.radius;
+              var leftEdge = circle.x - circle.radius;
+              var topEdge = circle.y - circle.radius;
+              var bottomEdge = circle.y + circle.radius;
+              
+              if (rightEdge < 0) {
+                  circle.x = canvas.width + circle.radius;
+              } else if (leftEdge > canvas.width) {
+                  circle.x = -circle.radius;
+              }
+              
+              if (bottomEdge < 0) {
+                  circle.y = canvas.height + circle.radius;
+              } else if (topEdge > canvas.height) {
+                  circle.y = -circle.radius;
+              }
+              
+             
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
         
