@@ -28,8 +28,24 @@ var makeLevelData = function (window) {
           { type: "sawblade", x: 400, y: groundY },
           { type: "sawblade", x: 600, y: groundY },
           { type: "sawblade", x: 900, y: groundY },
+          { type:  "reward",  x: 1100, y: groundY},
+          { type:   "enemy",  x: 1600, y: groundY},
         ],
       },
+      {
+        name: "Robot Massacre",
+        number: 3,
+        speed: -3,
+        gameItems: [  
+          
+          { type:  "reward",  x: 400, y: groundY},
+          { type: "sawblade", x: 600, y: groundY },
+          { type: "sawblade", x: 900, y: groundY },
+          { type: "sawblade", x: 1100, y: groundY },
+          { type:   "enemy",  x: 1600, y: groundY},
+
+        ]
+      }
     ];
     window.opspark.levelData = levelData;
   };

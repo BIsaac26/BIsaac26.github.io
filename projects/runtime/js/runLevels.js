@@ -14,17 +14,113 @@ var runLevels = function (window) {
     var levelData = window.opspark.levelData;
 
     // set this to true or false depending on if you want to see hitzones
-    game.setDebugMode(true);
+    game.setDebugMode(false);
 
     // TODOs 5 through 11 go here
     // BEGIN EDITING YOUR CODE HERE
+    function createSawBlade(x, y) {
+      var hitZoneSize = 25;
+      var damageFromObstacle = 10;
+      var sawBladeHitZone = game.createObstacle(
+        hitZoneSize,
+        damageFromObstacle
+      );
+      sawBladeHitZone.x = x;
+      sawBladeHitZone.y = y;
+      game.addGameItem(sawBladeHitZone);
+      var obstacleImage = draw.bitmap("img/sawblade.png");
+      sawBladeHitZone.addChild(obstacleImage);
+      obstacleImage.x = -25;
+      obstacleImage.y = -25;
+    }
+    createSawBlade(400, 470);
+    createSawBlade(900, 560);
+    createSawBlade(1400, 470);
 
-    
+    function createEnemy(x, y) {
+      // all code from TODO 11 and 12
+      var enemy = game.createGameItem("enemy", 25);
+      var redSquare = draw.rect(45, 100, "Orange");
+      redSquare.x = -25;
+      redSquare.y = -25;
+      enemy.addChild(redSquare);
+      enemy.x = x;
+      enemy.y = y;
+      game.addGameItem(enemy);
+      enemy.velocityX = -3.2;
+      enemy.rotationalVelocity = -1;
+      enemy.onPlayerCollision = function () {
+        game.changeIntegrity(-10);
+      };
+      enemy.onProjectileCollision = function () {
+        game.increaseScore(100);
+        enemy.fadeOut();
+      };
+    }
+    createEnemy(400, groundY - 50);
+    createEnemy(800, groundY - 50);
+    createEnemy(1200, groundY - 50);
+    function createReward(x, y) {
+      var reward = game.createGameItem("reward", 25);
+      var trophy = draw.rect(60, 75, "Purple");
+      trophy.x = -25;
+      trophy.y = -25;
+      reward.addChild(trophy);
+      reward.x = x;
+      reward.y = y;
+      reward.velocityX = -1.3
+      game.addGameItem(reward);
+      reward.onPlayerCollision = function () {
+        game.changeIntegrity(10);
+        
 
+      };
+      reward.onProjectileCollision = function () {
+        reward.fadeOut();
+      };
+    }
+    createReward(800, 500);
+    function createMarker(x,y){
+      var marker = game.createGameItem("marker", 25);
+      var end = draw.rect(40, 50, "LightGreen");
+      end.x = 50
+      end.y = 50
+      marker.addChild(end);
+      marker.x = x
+      marker.y = y
+      marker.velocityX = -1
+      
+      marker.onPlayerCollision = function () {
+        location.reload;
+      }
+      marker.onProjectileCollision = function(){
+        location.reload;
+      }
+      game.addGameItem(marker);
+    }
+    createMarker(1000,475)
     function startLevel() {
+
       // TODO 13 goes below here
-
-
+      var level = levelData[currentLevel];
+      var levelObjects = level.gameItems;
+      for (var i = 0; i < levelObjects.length; i++) {
+          var gameObject = levelObjects[i];
+          var x = gameObject.x;
+          var y = gameObject.y;
+          if (gameObject.type === "sawblade") {
+              createSawblade(x, y);
+          (gameObject.type === "enemy") 
+              createEnemy(x, y);
+           (gameObject.type === "reward") 
+              createReward(x, y);
+           (gameObject.type === "marker") 
+              createMarker(x, y);
+          }
+      }
+      
+      
+   
 
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
