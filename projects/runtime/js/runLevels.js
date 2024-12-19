@@ -91,10 +91,10 @@ var runLevels = function (window) {
       marker.velocityX = -1
       
       marker.onPlayerCollision = function () {
-        location.reload;
+        startLevel();
       }
       marker.onProjectileCollision = function(){
-        location.reload;
+        startLevel();
       }
       game.addGameItem(marker);
     }
@@ -102,22 +102,7 @@ var runLevels = function (window) {
     function startLevel() {
 
       // TODO 13 goes below here
-      var level = levelData[currentLevel];
-      var levelObjects = level.gameItems;
-      for (var i = 0; i < levelObjects.length; i++) {
-          var gameObject = levelObjects[i];
-          var x = gameObject.x;
-          var y = gameObject.y;
-          if (gameObject.type === "sawblade") {
-              createSawblade(x, y);
-          (gameObject.type === "enemy") 
-              createEnemy(x, y);
-           (gameObject.type === "reward") 
-              createReward(x, y);
-           (gameObject.type === "marker") 
-              createMarker(x, y);
-          }
-      }
+     
       
       
    
