@@ -33,9 +33,9 @@ var runLevels = function (window) {
       obstacleImage.x = -25;
       obstacleImage.y = -25;
     }
-    createSawBlade(400, 470);
-    createSawBlade(900, 560);
-    createSawBlade(1400, 470);
+    createSawBlade(400, groundY - 100);
+    createSawBlade(900, groundY - 15);
+    createSawBlade(1400, groundY - 100);
 
     function createEnemy(x, y) {
       // all code from TODO 11 and 12
@@ -98,7 +98,7 @@ var runLevels = function (window) {
       }
       game.addGameItem(marker);
     }
-    createMarker(1000,475)
+    createMarker(1000,groundY - 50)
     function startLevel() {
 
       // TODO 13 goes below here
